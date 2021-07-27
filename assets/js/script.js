@@ -75,6 +75,8 @@ window.addEventListener("load", () => {
               highScoreElement.innerHTML = highscore;
             }
 
+            alert("Permainan selesai, skor anda: " + game.score);
+
             game = {
               time: 60,
               score: 0,

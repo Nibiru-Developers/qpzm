@@ -170,16 +170,17 @@ window.addEventListener("load", () => {
     }
 
     function loadDataAndInsertToDom(data) {
-      let highRank = data.slice(0, 3);
-      let otherRank = data.slice(3);
+      try {
+        let highRank = data.slice(0, 3);
+        let otherRank = data.slice(3);
 
-      let highRankItemElement = document.querySelectorAll(".high-rank-item");
-      highRankItemElement.forEach((item, index) => {
-        item.innerHTML = `
+        let highRankItemElement = document.querySelectorAll(".high-rank-item");
+        highRankItemElement.forEach((item, index) => {
+          item.innerHTML = `
             <div class="high-rank-name">
               ${highRank[index].name.slice(0, 16)}${
-          highRank[index].name.length > 15 ? "..." : ""
-        } #${index + 1}
+            highRank[index].name.length > 15 ? "..." : ""
+          } #${index + 1}
             </div>
             <div class="high-rank-score">
               Score: ${highRank[index].score}
@@ -188,10 +189,10 @@ window.addEventListener("load", () => {
               Date: ${highRank[index].date}
             </div>
           `;
-      });
+        });
 
-      otherRank.forEach((item, index) => {
-        document.querySelector(".other-rank").innerHTML += `
+        otherRank.forEach((item, index) => {
+          document.querySelector(".other-rank").innerHTML += `
             <div class="other-rank-item">
               <div class="other-rank-name">
                 ${item.name}${item.name.length > 15 ? "..." : ""} #${index + 4}
@@ -204,7 +205,8 @@ window.addEventListener("load", () => {
               </div>
           </div>
           `;
-      });
+        });
+      } catch (error) {}
     }
   }
 });

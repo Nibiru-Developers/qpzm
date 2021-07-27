@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Game sederhana menggunakan Javascript.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, DOM, Webpack">
+  <meta name="author" content="Andry Pebrianto">
+  <title>QPZM - Leaderboard</title>
+
+  <link rel="stylesheet" href="assets/css/all.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/leaderboard.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="brand-title"><a href="index.html">QPZM</a></div>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">Play</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Leaderboard</h1>
+
+    <div class="leaderboard-container">
+      <div class="high-rank">
+        <div class="high-rank-item rank-1"></div>
+        <div class="high-rank-item rank-2"></div>
+        <div class="high-rank-item rank-3"></div>
+      </div>
+      <div class="other-rank"></div>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+  <script src="assets/js/script.js" type="module"></script>
+</body>
+
+</html>

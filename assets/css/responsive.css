@@ -1,0 +1,42 @@
+/* Ketika width layar di bawah 500px */
+@media (max-width: 500px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 1rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .high-rank {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    grid-template-areas:
+      "rank1 rank1"
+      "rank2 rank2"
+      "rank3 rank3";
+  }
+}

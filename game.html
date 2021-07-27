@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Game sederhana menggunakan Javascript.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, DOM, Webpack">
+  <meta name="author" content="Andry Pebrianto">
+  <title>QPZM - Game</title>
+
+  <link rel="stylesheet" href="assets/css/all.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/game.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="brand-title"><a href="index.html">QPZM</a></div>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">Play</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <h1>QPZM Simple Game</h1>
+
+    <div class="game-container">
+      <div class="container-1">
+        <div class="score-container">Score: <span class="score">0</span></div>
+        <div class="time-container">Time: <span class="time">0</span></div>
+        <div class="highscore-container">High Score: <span class="high-score">0</span></div>
+      </div>
+      <div class="container-2">
+        <div class="game" hidden>
+          ...
+        </div>
+        <button class="start-button">
+          Start
+        </button>
+      </div>
+      <div class="container-3">
+        <button class="q">Q</button>
+        <button class="p">P</button>
+        <button class="z">Z</button>
+        <button class="m">M</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+  <script src="assets/js/script.js" type="module"></script>
+</body>
+
+</html>

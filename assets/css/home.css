@@ -1,0 +1,13 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+}
+
+.home-container a {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: none;
+  background-color: #3b74dd;
+}

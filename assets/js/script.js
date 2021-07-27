@@ -146,7 +146,10 @@ window.addEventListener("load", () => {
       game.alreadyClick = true;
     }
   } else if (urlPath.includes("leaderboard.html")) {
-    leaderboardsRef.on("value", showData, showError);
+    leaderboardsRef
+      .orderByChild("score")
+      .limitToLast(20)
+      .on("value", showData, showError);
 
     function showData(results) {
       let sortable = [];
@@ -168,7 +171,7 @@ window.addEventListener("load", () => {
 
     function loadDataAndInsertToDom(data) {
       let highRank = data.slice(0, 3);
-      let otherRank = data.slice(3, 21);
+      let otherRank = data.slice(3);
 
       let highRankItemElement = document.querySelectorAll(".high-rank-item");
       highRankItemElement.forEach((item, index) => {

@@ -8,4 +8,4 @@ Teknologi yang digunakan:
 - Localstorage.
 - Firebase realtime database.
 
-Demo: [QPZM Simple JS Game](https://qpzm.netlify.app/)
+Demo: [QPZM Simple JS Game](https://qpzm.vercel.app/)
